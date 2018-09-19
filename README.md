@@ -9,6 +9,16 @@ Ubuntu Linux 18.04 (Bionic) のSingularityコンテナ
     - [Singularityのインストール方法（Official Document)](https://www.sylabs.io/guides/2.6/user-guide/installation.html) 
     
 
+Ubuntu Linuxにインストールする場合
+
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install build-essential libtool automake libarchive-dev debootstrap git emacs
+    
+    
+    
+    
+
 ## 使い方
 
     # コンテナのビルド
