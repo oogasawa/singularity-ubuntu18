@@ -91,13 +91,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     # install tools from tarballs.
 
-    ## installing iperf3 ver3.6
-	wget https://downloads.es.net/pub/iperf/iperf-3.6.tar.gz
-	tar zxvf iperf-3.6.tar.gz
-	cd iperf-3.6
-	./configure
-	make
-	make install
+    ## installing iperf3 ver3.1
+	apt install -y iperf3
+	
 
 
 	
