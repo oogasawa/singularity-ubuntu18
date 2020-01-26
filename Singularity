@@ -12,7 +12,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 %environment
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 	PATH=$PATH:/opt/anaconda3/bin
-	# export PATH
+	export PATH
 
 
 %runscript
