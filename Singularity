@@ -11,6 +11,8 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %environment
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+	PATH=$PATH:/opt/anaconda/bin
+	# export PATH
 
 
 %runscript
@@ -21,6 +23,16 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     echo "Hello from inside the container"
     sed -i 's/$/ universe/' /etc/apt/sources.list
 	apt-get update
+
+
+    # misc tools
+	apt install -y ncdu             #  ncurses ディスク利用状況ビューア
+    apt install -y task-spooler     # personal job scheduler
+    apt install -y sysstat          # system performance tools for Linux
+    apt install -y tree 
+    apt install -y sl
+	apt install -y cowsay
+	apt install -y git bzip2
 
 
     # network_tools
@@ -62,7 +74,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	apt install -y  python-dev  
 	apt install -y  python3-dev
     wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
-    bash Anaconda3-2019.10-Linux-x86_64.sh -b	
+    bash Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3
 
 
 
@@ -78,14 +90,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 
 
-    # misc tools
-	apt install -y ncdu             #  ncurses ディスク利用状況ビューア
-    apt install -y task-spooler     # personal job scheduler
-    apt install -y sysstat          # system performance tools for Linux
-    apt install -y tree 
-    apt install -y sl
-	apt install -y cowsay
-	apt install -y git
 	
 
     # install tools from tarballs.
