@@ -61,6 +61,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	# Python
 	apt install -y  python-dev  
 	apt install -y  python3-dev
+    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+    bash Anaconda3-2019.10-Linux-x86_64.sh -b	
+
 
 
     # node.js
@@ -68,14 +71,10 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y  nodejs
 
 
-
-    # Perl
-    apt install -y  perl-doc 
-    apt install -y  libwww-mechanize-perl   # module to automate interaction with websites
-    apt install -y  libjson-perl            # module for manipulating JSON-formatted data
-    apt install -y  libset-intspan-perl     # module to manage sets of integers
-    apt install -y  libset-scalar-perl      # Perl interface for operations on finite sets
-
+    # R
+	apt install r-base
+    ## all CRAN packages
+    apt search r-cran | grep ^r-cran | perl -ne 'if ($_ =~ /^([a-z-]+)\//) {print $1, "\n"}' | xargs -L 1 apt -y install	
 
 
 
@@ -100,4 +99,3 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	make install
 
 
-	
