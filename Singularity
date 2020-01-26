@@ -72,7 +72,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 
     # R
-	apt install r-base
+	apt install -y r-base
     ## all CRAN packages
     apt search r-cran | grep ^r-cran | perl -ne 'if ($_ =~ /^([a-z-]+)\//) {print $1, "\n"}' | xargs -L 1 apt -y install	
 
