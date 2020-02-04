@@ -32,16 +32,17 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y tree 
     apt install -y sl
 	apt install -y cowsay
-	apt install -y git bzip2
+	apt install -y git bzip2 pigz
 
 
     # network_tools
-	apt install -y openssh-client
+	apt install -y  openssh-client
     apt install -y  cadaver
     apt install -y  ntp 
     apt install -y  lftp  
     apt install -y  wget 
     apt install -y  curl
+	apt install -y  net-tools
 
     # Emacs
     apt install -y emacs 
@@ -63,6 +64,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y  libnetpbm10-dev   
     apt install -y  flex  
 	apt install -y  bison
+
 
 	
 	# Java
