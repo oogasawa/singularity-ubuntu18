@@ -11,9 +11,9 @@ Ubuntu Linuxにdebootstrap他の必要なソフトをインストールする場
     sudo apt upgrade
     sudo apt install build-essential libtool automake libarchive-dev debootstrap git
 
-Singularityはversion 2.x系をインストールすること。
+Singularityはversion 2.x系でも3.x系でもよい。（今はもう3.x系推奨）
 
-- [Singularityのインストール方法（Official Document)](https://www.sylabs.io/guides/2.6/user-guide/installation.html) 
+- [Singularityのインストール方法（Official Document)](https://sylabs.io/guides/3.5/admin-guide/installation.html) 
 
 
 
@@ -28,3 +28,5 @@ Singularityはversion 2.x系をインストールすること。
     # コンテナ内での作業
     sudo singularity shell --write $HOME/singularity-images/ubuntu18
     
+    # *.sifファイルに固めてスパコンなど共用計算機にコピー
+    sudo singularity build ubuntu18.sif $HOME/singularity-images/ubuntu18
