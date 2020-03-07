@@ -1,7 +1,6 @@
 # Ubuntu18 Singularity
 
-Ubuntu Linux 18.04 (Bionic) のSingularityコンテナ
-解析用ツール全部入りのコンテナ
+Ubuntu Linux 18.04 (Bionic) + 解析用ツール全部入りの Singularityコンテナ
 
 
 ## 前提
