@@ -11,6 +11,8 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %environment
     LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+	PATH=$PATH:/opt/anaconda3/bin
+	export PATH LD_LIBRARY_PATH
 
 
 %runscript
@@ -23,13 +25,24 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	apt-get update
 
 
+    # misc tools
+	apt install -y ncdu             #  ncurses ディスク利用状況ビューア
+    apt install -y task-spooler     # personal job scheduler
+    apt install -y sysstat          # system performance tools for Linux
+    apt install -y tree 
+    apt install -y sl
+	apt install -y cowsay
+	apt install -y git bzip2 pigz
+
+
     # network_tools
-	apt install -y openssh-client
+	apt install -y  openssh-client
     apt install -y  cadaver
     apt install -y  ntp 
     apt install -y  lftp  
     apt install -y  wget 
     apt install -y  curl
+	apt install -y  net-tools
 
     # Emacs
     apt install -y emacs 
@@ -52,6 +65,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y  flex  
 	apt install -y  bison
 
+
 	
 	# Java
 	apt install -y  openjdk-11-jdk  
@@ -61,6 +75,9 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	# Python
 	apt install -y  python-dev  
 	apt install -y  python3-dev
+    wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+    bash Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3
+
 
 
     # node.js
@@ -68,14 +85,10 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y  nodejs
 
 
-
-    # Perl
-    apt install -y  perl-doc 
-    apt install -y  libwww-mechanize-perl   # module to automate interaction with websites
-    apt install -y  libjson-perl            # module for manipulating JSON-formatted data
-    apt install -y  libset-intspan-perl     # module to manage sets of integers
-    apt install -y  libset-scalar-perl      # Perl interface for operations on finite sets
-
+    # R
+	apt install -y r-base
+    ## all CRAN packages
+    apt search r-cran | grep ^r-cran | perl -ne 'if ($_ =~ /^([a-z-]+)\//) {print $1, "\n"}' | xargs -L 1 apt -y install	
 
 
 
@@ -114,6 +127,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y stress
 	apt install -y sysbench
 	apt install -y ubuntu-benchmark-tools
+
 	
 
     # install tools from tarballs.
@@ -127,4 +141,3 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	make install
 
 
-	
