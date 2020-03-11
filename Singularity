@@ -103,24 +103,11 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
     apt install -y cwltool
 
     apt install -y fio
-	# apt install -y ceph-test
 	apt install -y dbench
-	# apt install -y fsmark
-	# apt install -y blkreplay
 	apt install -y hpcc
-	# apt install -y httest
-	# apt install -y iozone3
-	# apt install -y lynis
-	# apt install -y mbw
 	apt install -y namebench
-	apt install -y netperf
 
-	#apt install -y nmon
-	apt install -y perftest
 	apt install -y phoronix-test-suite
-	apt install -y postmark
-	#apt install -y rally
-	#apt install -y seekwatcher
 
     apt install -y stress
 	apt install -y sysbench
