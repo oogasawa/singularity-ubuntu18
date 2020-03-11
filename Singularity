@@ -94,7 +94,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
     # misc tools
 	apt install -y ncdu             #  ncurses ディスク利用状況ビューア
-    apt install -y task-spooler     # personal job scheduler
     apt install -y sysstat          # system performance tools for Linux
     apt install -y tree 
     apt install -y sl
@@ -102,7 +101,6 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	apt install -y git
 
     apt install -y cwltool
-	apt install -y htcondor
 
     apt install -y fio
 	# apt install -y ceph-test
@@ -117,12 +115,12 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	apt install -y namebench
 	apt install -y netperf
 
-	apt install -y nmon
+	#apt install -y nmon
 	apt install -y perftest
 	apt install -y phoronix-test-suite
 	apt install -y postmark
-	apt install -y rally
-	apt install -y seekwatcher
+	#apt install -y rally
+	#apt install -y seekwatcher
 
     apt install -y stress
 	apt install -y sysbench
