@@ -105,15 +105,15 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 	apt install -y htcondor
 
     apt install -y fio
-	apt install -y ceph-test
+	# apt install -y ceph-test
 	apt install -y dbench
-	apt install -y fsmark
-	apt install -y blkreply*
+	# apt install -y fsmark
+	# apt install -y blkreplay
 	apt install -y hpcc
-    apt install -y httest
-	apt install -y iozone3
-	apt install -y lynis
-	apt install -y mbw
+	# apt install -y httest
+	# apt install -y iozone3
+	# apt install -y lynis
+	# apt install -y mbw
 	apt install -y namebench
 	apt install -y netperf
 
